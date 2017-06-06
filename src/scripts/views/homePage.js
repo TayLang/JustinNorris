@@ -21,7 +21,7 @@ var HomePage = React.createClass({
 		console.log(this.state.nameValue)
 		return (
 			<div className="home-page">
-				<h1>{`True {this.state.nameValue} Facts`}</h1>
+				<h1>{`True ${this.state.nameValue} Facts`}</h1>
 				<Chuck chuckCollection={this.state}/>
 			</div>
 			)
