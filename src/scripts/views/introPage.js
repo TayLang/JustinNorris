@@ -28,7 +28,7 @@ class IntroPage extends React.Component {
 	}
 
 	handleSubmit(event) {
-		alert('a name was submitted: ' + this.state.nameValue);
+		//alert('a name was submitted: ' + this.state.nameValue);
 		location.hash = "home"
 		event.preventDefault();
 	}

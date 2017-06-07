@@ -11,7 +11,8 @@ var ACTIONS = {
 		})
 		promise.then(() => {
 			STORE.set({
-				chuckMod : chuckInstance
+				chuckMod : chuckInstance,
+				nameValue : nameValue
 			})
 		})
 	}

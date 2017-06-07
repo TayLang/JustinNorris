@@ -6,19 +6,18 @@ import STORE from '../STORE.js'
 import IntroPage from './introPage.js'
 
 var HomePage = React.createClass({
-	componentWillMount : function() {
+	componentWillMount() {
 		ACTIONS.fetchChuck()
 		STORE.on('dataUpdated', () => {
 			this.setState(STORE.data)
 		})
 	},
 
-	getInitialState : function() {
-		return STORE.data
-	},
+	getInitialState() {
+ 		return STORE.data
+ 	},
 
-	render: function() {
-		console.log(this.state.nameValue)
+	render() {
 		return (
 			<div className="home-page">
 				<h1>{`True ${this.state.nameValue} Facts`}</h1>
@@ -55,4 +54,15 @@ var Chuck = (props) => {
 // 	)
 // }
 
+	// getInitialState() {
+ // 		var selectedOption = localStorage.getItem( 'SelectedOption' ) || 1;
+ // 	   		return {
+ //        		selectedOption: selectedOption
+ //    	};
+	// }
+
+	// setSelectedOption(option) {
+ //    	localStorage.setItem( 'SelectedOption', option );
+ //    	this.setState( { selectedOption: option } );
+	// }
 export default HomePage
