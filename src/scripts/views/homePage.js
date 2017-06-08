@@ -10,7 +10,10 @@ var HomePage = React.createClass({
 		ACTIONS.fetchChuck()
 		STORE.on('dataUpdated', () => {
 			this.setState(STORE.data)
-		})
+		},
+		//console.log(STORE.data.nameValue)
+
+		)
 	},
 
 	getInitialState() {
@@ -29,6 +32,7 @@ var HomePage = React.createClass({
 })
 
 var Chuck = (props) => {
+	console.log(props)
 	var interim = props.chuckCollection.chuckMod.get('value')
 	var repl = props.chuckCollection.nameValue
 	if (interim) {

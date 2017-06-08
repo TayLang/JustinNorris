@@ -1,8 +1,10 @@
 import {ChuckModel} from './models/chuckModels.js'
 import STORE from './STORE'
+import IntroPage from './views/introPage'
+import HomePage from './views/homePage'
 
 var ACTIONS = {
-	fetchChuck : function() {
+	fetchChuck : function(nameInput) {
 		var chuckInstance = new ChuckModel()
 		var promise = chuckInstance.fetch({
 			data:{
@@ -12,10 +14,15 @@ var ACTIONS = {
 		promise.then(() => {
 			STORE.set({
 				chuckMod : chuckInstance,
-				nameValue : nameValue
 			})
 		})
-	}
+	},
+
+	// setChuck : function(nameInput) {
+	// 	STORE.set({
+	// 		nameValue : nameInput
+	// 	})
+	// }
 }
 
 export default ACTIONS
