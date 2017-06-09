@@ -17,12 +17,6 @@ var ACTIONS = {
 			})
 		})
 	},
-
-	// setChuck : function(nameInput) {
-	// 	STORE.set({
-	// 		nameValue : nameInput
-	// 	})
-	// }
 }
 
 export default ACTIONS

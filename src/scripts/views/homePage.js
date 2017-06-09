@@ -32,11 +32,13 @@ var HomePage = React.createClass({
 })
 
 var Chuck = (props) => {
+	console.log(localStorage)
 	console.log(props)
 	var interim = props.chuckCollection.chuckMod.get('value')
 	var repl = props.chuckCollection.nameValue
 	if (interim) {
 		var newString = interim.replace(/Chuck Norris/gi,repl)
+		// STORE.save()
 	}
 	
 	return (

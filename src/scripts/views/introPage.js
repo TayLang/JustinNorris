@@ -25,6 +25,7 @@ class IntroPage extends React.Component {
 
 	handleChange(event) {
 		STORE.set({nameValue: event.target.value});
+		localStorage.setItem('nameValue', JSON.stringify(event.target.value));
 	}
 
 	handleSubmit(event) {
@@ -35,6 +36,8 @@ class IntroPage extends React.Component {
 	}
 
 	render() {
+		console.log(localStorage)
+		console.log(STORE.data)
 		return (
 			<form onSubmit={this.handleSubmit}>
 				<label>

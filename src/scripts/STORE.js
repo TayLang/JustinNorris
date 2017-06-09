@@ -5,7 +5,7 @@ var STORE = Object.assign({}, Backbone.Events, {
 	data: {
 		chuckMod: new ChuckModel(),
 		currentChuck: "",
-		nameValue: ""
+		nameValue: JSON.parse(localStorage.getItem('nameValue'))
 	},
 	set: function(obj) {
 		this.data = Object.assign(this.data, obj)
@@ -13,7 +13,7 @@ var STORE = Object.assign({}, Backbone.Events, {
 	},
 	get: function(attribute) {
 		return this.data[attribute]
-	}
+	},
 })
 
 export default STORE
