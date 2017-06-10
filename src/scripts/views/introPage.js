@@ -39,13 +39,16 @@ class IntroPage extends React.Component {
 		console.log(localStorage)
 		console.log(STORE.data)
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<label>
-					Name:
-					<input type="text" value={this.state.nameValue} onChange={this.handleChange} />
-				</label>
-				<input type="submit" value="Submit" />
-			</form>	
+			<div className="formDiv">
+				<h1>Welcome to Custom Norris!</h1>
+				<h2>Enter your Name here!</h2>
+				<form onSubmit={this.handleSubmit}>
+					<label>
+						<input type="text" value={this.state.nameValue} onChange={this.handleChange} />
+					</label>
+					<input type="submit" value="Chuckify me!" />
+				</form>	
+			</div>
 		);
 	}
 }
